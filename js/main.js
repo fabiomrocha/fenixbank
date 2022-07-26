@@ -1,4 +1,5 @@
 
+
 /**
  * Após o clique do botão "Cadastrar" na tela cadastro.html
  * inicia-se o evento abaixo pois o método addEventListener
