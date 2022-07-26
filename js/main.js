@@ -4,11 +4,16 @@
  * está escutando todos os eventos da tela
  */
 var botao = document.getElementById("botao");
-botao.addEventListener('click', function(){
+botao.addEventListener('click', () => {
 
     carregaObjetosDaTela();
 
 });
+// botao.addEventListener('click', function(){
+
+//     carregaObjetosDaTela();
+
+// });
 
 /**
  * O evento de click do botão chamou esta function para carregar os objetos da tela
