@@ -53,8 +53,8 @@ function validarCampos(cliente){
     if( verificaSeNomeInvalido(cliente) ){
         addMessage("nome", "Nome inválido!");
     }
-    if(cliente.dtNascimento == ''){
-        addMessage("dtNascimento");
+    if(verificaMenor18Anos(cliente)){
+        addMessage("dtNascimento", "Idade inválida!");
     }
     if(cliente.cpf == ''){
         addMessage("cpf");
