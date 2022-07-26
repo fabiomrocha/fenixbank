@@ -3,12 +3,20 @@
  * INSERE A MÁSCARA PARA TELEFONE RESIDENCIAL E
  * PARA O TELEFONE CELULAR
  */
+
 function mascaraFone(event) {
+
+    
     var valor = document.getElementById("telefone").value;
     // Verifica caracteres não numéricos e substitui por ""
     var retorno = valor.replace(/\D/g, "");
     // Verifica 0 a esquerda e subititui por ""
     retorno = retorno.replace(/^0/, "");
+    if (retorno.length < 10){
+        document.getElementById("telefoneError").innerHTML = "<font color='gray'>Telefone incompleto </font>";
+    } else{
+        limpaCampo("telefone");
+    }
     if (retorno.length == 11) {
         // Muda posicionamento "-" para o telefone celular de 9 dígitos
         // Máscara do telefone celular (99) 99999-9999
@@ -28,6 +36,6 @@ function mascaraFone(event) {
                 // Coloca a máscara do DDD "("
                 retorno = retorno.replace(/^(\d*)/, "($1");
             }
-    document.getElementById("telefone").attributes[0].ownerElement['value'] = retorno;
+    document.getElementById("telefone").value = retorno;
 }
     
