@@ -55,7 +55,8 @@
                             </label>
                             <label>
                                 <span>Telefone</span>
-                                <input type="tel" class="input_text" id="telefoneCelular" placeholder="(xx) xxxxx-xxxx"/>
+                                <input type="text" id="telefone" class="input_text" placeholder="(xx) xxxxx-xxxx" 
+                                maxlength="15" onkeyup="mascaraFone(event)" />
                             </label>
                             <label>   
                                 <span></span>              
@@ -90,6 +91,7 @@
 				</ul>
 			</div>
 		</footer>
+        <script src="js/mascaraTelefone.js"></script>
 		<script src="js/validacao.js"></script>	
 		<script src="js/main.js"></script>	
 	</body>
