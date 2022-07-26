@@ -48,7 +48,7 @@ function carregaObjetosDaTela(){
  * No addMessage - segundo parametro - é opcional enviar uma mensagem específica. 
  */
 function validarCampos(cliente){
-    if(cliente.nome == ''){
+    if( !validaSeNomeOk(cliente) ){
         addMessage("nome", "Nome inválido!");
     }
     if(cliente.dtNascimento == ''){
@@ -99,4 +99,15 @@ function limpaCampo(campo){
         campoInput.style.border = "1px double #166E30";
     }
 
+}
+
+/**
+ * VALIDAÇÕES
+ */
+function validaSeNomeOk(cliente){
+    if(cliente.nome != null && cliente.nome != ''){
+        return true;
+    }else{
+        return false;
+    }
 }
