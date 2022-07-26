@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+     
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width = device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+		<title>Fênix Bank - Cadastro - ProiTEC III - 2022</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/cadastro.css" media="screen" />
+    </head>
+	<body>
+        <header>
+            <div class="caixa">
+                <h1><img class="logo" src="imagens/logo.jpg"></img></h1> 
+                <nav>
+                    <ul class="navegacao">
+                        <li> 
+                            <a href="index.html"> <img class="botao_volta" src="imagens/back-arrow.png"></a>
+                        
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+		<main>
+            <form>
+                    <div class="formulario">
+                        <h1>Cadastro de Conta</h1>
+                            <label>
+                                <span>Nome Completo<div id="nomeError"></div></span>
+                                <input type="text" class="input_text" id="nome" placeholder="Digite seu nome completo" 
+                                    onfocus="limpaCampo('nome')"/>
+                            </label>
+                            <label>
+                                <span>Data de Nascimento<div id="dtNascimentoError"></div></span>
+                                <input type="date" class="input_text" id="dtNascimento" 
+                                    onfocus="limpaCampo('dtNascimento')"/>
+                            </label>
+                            <label>
+                                <span>CPF<div id="cpfError"></div></span>
+                                 <input type="text" class="input_text" id="cpf" placeholder="Digite seu CPF"
+                                    onfocus="limpaCampo('cpf')"/>
+                            </label>
+                            <label>
+                                <span>Nome da Mãe</span>
+                                <input type="text" class="input_text" id="nomeMae" placeholder="Digite o nome da sua mãe"/>
+                            </label>
+                            <label>
+                                <span>E-mail</span>
+                                <input type="email" class="input_text" id="email" placeholder="Digite seu e-mail"/>
+                            </label>
+                            <label>
+                                <span>Telefone</span>
+                                <input type="tel" class="input_text" id="telefoneCelular" placeholder="(xx) xxxxx-xxxx"/>
+                            </label>
+                            <label>   
+                                <span></span>              
+                                <button type="button" class="button" id="botao"> Cadastrar </button> 
+                                     
+                            </label>
+                    </div>
+                </form>
+       
+		</main>
+           
+        <footer>
+			<div> 
+				<ul class="rodape"> 
+					<li> 
+						<span class="whats">  
+							<a  href="https://api.whatsapp.com/send?l=pt&amp;phone=5509999999999">
+								<img  src="imagens/whats1.png"><br /> 99 9999 9999
+							</a>
+						</span>
+					</li> 
+
+					<li> 
+						<span class="copyright"> 
+						  Copyright Fênix Bank &#169; <br /> 2022 <br /> <br />ProiTEC III	
+						</span>
+					</li>
+					<li> <span class="data"> 
+						Data da última atualização: 19/07/2022  <br /> Version: 01.618 - Grupo III
+						</span>	
+					</li>				
+				</ul>
+			</div>
+		</footer>
+		<script src="js/main.js"></script>	
+	</body>
+</html>

@@ -1,0 +1,96 @@
+header{
+    background: #FFFFFF;
+	padding: 20px 0;
+    display: block;
+}
+
+form{
+    padding: 30px;
+}
+/* Dimensões da Logo */
+.logo{
+	margin-top: 0;
+	width: 450px;
+	height: 144px;
+}
+/* dimensões e posicao da caixa do header */
+.caixa{
+	position: relative;
+	width: 940px;
+	height: 144px;
+	margin: 0 auto;
+
+}
+/* Personalização do botao "volta" */
+.botao_volta{
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+    border-style:solid;
+    border-radius: 100px;
+}
+
+/* personalizacao e dimensoes do formulario*/ 
+div.formulario {
+    margin:0 auto;
+    width:40%;
+    background:#23B14D;
+    position:relative;
+    border: 1px double #166E30;
+    display:block;
+}
+/*Titulo do formulario*/ 
+div.formulario h1 {
+    color:#FFF;
+    font-size:18px;
+    padding:5px 0 5px 5px;
+    font-weight: bold; 
+}
+
+/*Cor e tamanho dos campos do Formulario*/ 
+div.formulario label {
+    width:100%;
+    display: block;
+    background:rgb(255, 255, 255);
+    border:1px double #616e16;
+    padding:10px 0 10px 0;	
+}
+
+/*Caracteristicas de cada campo do Formulario*/ 
+div.formulario label span {
+    display: block;
+    color:#233B0D;
+    font-size:12px;
+    float:left;  
+    width:150px;
+    text-align:left;
+    padding:5px 20px 0 0;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+/*dimensoes e posicao de cada campo de input do formulario*/
+div.formulario .input_text {
+    padding:10px 10px;
+    width:200px;
+    background:#FFF;
+    border: 1px double #166E30;
+    color: #768571;
+    
+}
+
+/* personalizacao do botao "cadastrar" */
+div.formulario .button{
+    margin:0 0 10px 0;
+    padding:4px 7px;
+    background:#23B14D;
+    border: 1px double #166E30;
+    position: relative;
+    top:5px;
+    left:65px;
+    width:100px;
+    color:#FFF;
+    font-weight: bold; 
+   
+}

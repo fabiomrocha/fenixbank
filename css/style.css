@@ -1,0 +1,162 @@
+*{ margin:0; padding:0;}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body{ 
+ font:100% normal Arial, Helvetica, sans-serif;
+}
+
+header {
+	background: #ffffff;
+	padding: 20px 0;
+}
+/* dimensões e posicao da caixa do header */
+.caixa{
+	position: relative;
+	width: 940px;
+	height: 144px;
+	margin: 0 auto;
+
+}
+/* Dimensões da Logo */
+.logo{
+	margin-top: 0;
+	width: 450px;
+	height: 144px;
+}
+/* Personalização do botao "abra sua conta" */
+.botao{
+	margin-right: 20px;
+	width: 200px;
+	height: 40px;
+	border-width: 2px;
+	border-style: solid;
+	box-sizing: border-box;
+	border-radius: 10px;
+	}
+
+	/* posicao do botao "abra sua conta" */
+nav {
+	position:absolute;
+	top: 90px;
+	right: 0;
+}
+
+/* cor da borda dos botoes "abra sua conta" e "volta" */
+nav a {
+	color: #088C09;
+}
+/* cor da borda dos botoes "abra sua conta" e "volta", quando o cursor mouse "passa por cima" */
+nav a:hover {
+	color: #ffffff;
+}
+/* personalizacao da caixa descricao */
+.caixa_descricao{
+	position:relative;
+	margin-left: auto;
+    margin-right: auto;
+	width: 940px;
+	border-style: solid;
+}
+/* personalizacao do texto de descrição */
+.descricao {
+	font-size: larger;
+	text-align: left;
+}
+
+/* Personalizacao da palavra "esperanca" */
+#esperanca {
+	color: green;
+	font-weight:bold;
+}
+
+/* Dimensão e posicao da caixa de produtos */
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 0;
+
+}
+/* personalização da caixa de produtos */
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 1.5%;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	border-color: #233B0D;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+}
+/* cor da borda dos "produtos", quando o cursor mouse "passa por cima" */
+.produtos li:hover {
+	border-color: #ffffff;
+}
+
+/* Personalização da Imagem do Background */
+main {
+	text-align: center;
+	background-image: url("../imagens/bg.jpg");
+	width: 100%;
+	flex-grow: 1;
+}
+
+/* dimensões do rodapé */
+.rodape {
+	width: 940px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+}
+/* personalização do rodapé */
+.rodape li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+   	vertical-align: top;
+	margin: 1.5%;
+	box-sizing: border-box;
+	border-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;	
+	
+	
+}
+
+/* link do wpp da api e sua personalizaçao */
+.rodape li .whats a{
+	text-decoration: none;
+	color: #233B0D;
+}
+
+/* dimensoes imagem do wpp */
+.rodape img {
+    max-width:55px;
+    max-height:55px;
+    width: 45px;
+    height: 45px;
+	text-decoration: none;
+}
+/* personalizaçao do texto copyright */
+.rodape li .copyright {
+	background-color: #FFF;
+	color: #233B0D;
+	font-size: 16px;
+	
+}
+/* personalizaçao do texto data */
+.rodape li .data{
+	font-size: 14px;
+	font-style: italic;
+	color: #233B0D;
+	
+
+}
+
+
