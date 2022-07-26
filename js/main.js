@@ -53,9 +53,16 @@ function validarCampos(cliente){
     if( verificaSeNomeInvalido(cliente) ){
         addMessage("nome", "Nome inválido!");
     }
-    if(verificaMenor18Anos(cliente)){
-        addMessage("dtNascimento", "Idade inválida!");
+    
+    // Validação Data de Nascimento US02
+    // Recebe retorno com mensagem de validação da Data
+    let validacaoData = verificaSeDataNascimentoInvalida(cliente)
+    
+    // Se a mensagem for diferente de Ok (Data Inválida), então adiciona mensagem em tela
+    if(validacaoData !== "Ok"){
+        addMessage("dtNascimento", validacaoData);
     }
+    
     if(cliente.cpf == ''){
         addMessage("cpf");
     }
@@ -72,9 +79,9 @@ function addMessage(nomeCampo, textoDeErro){
     let mensagem;
 
     if(textoDeErro == undefined){
-        mensagem = "<font color='red'>Campo inválido </font>";
+        mensagem = "<font color='red' size=1px>Campo inválido </font>";
     }else{
-        mensagem = "<font color='red'>"+textoDeErro+" </font>";
+        mensagem = "<font color='red' size=1px>"+textoDeErro+" </font>";
     }
 
     document.getElementById(nomeCampo+"Error").innerHTML = mensagem;
