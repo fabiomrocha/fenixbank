@@ -26,7 +26,7 @@ function carregaObjetosDaTela(){
     cliente.dtNascimento = document.getElementById("dtNascimento").value;
     cliente.cpf = document.getElementById("cpf").value;
     cliente.nomeMae = document.getElementById("nomeMae").value;
-    cliente.telefoneCelular = document.getElementById("telefoneCelular").value;
+    cliente.telefone = document.getElementById("telefone").value;
     cliente.email = document.getElementById("email").value;
     
     console.log(cliente.nome);
