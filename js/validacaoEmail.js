@@ -14,68 +14,50 @@ Nesta função, recebemos o conteudo do campo email e separamos em duas partes:
     2ª) dominio  == depois do símbolo @;
 */
 
-function verificaEmailInvalido(cliente) {
+function verificaSeEmailInvalido(cliente) {
 
     // console.log(usuario, dominio);
     
     if (cliente.email == null || cliente.email == '') {
-        return true;
+        return false;
     } 
 
-    /*
-    Para resolver problemas de validação complexos utilizamos geralmente expressões regulares, as famosas regex:
-    Um outro ponto importante sobre este tipo de validação é que não devemos criar uma regex tão complexa.
-    Podemos acabar deixando alguns provedores ou e-mails de fora da validação.
-    Então a nossa regex será a seguinte: texto@texto.com
-    */
-
-    const regex1 = /\S+@\S+\.\S+/;
-
-    if (!regex1.test(cliente.email)) {
-        return true;
-    };
-    
-    const regex2 = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-    if (!regex2.test(String(cliente.email).toLowerCase())) {
-        return true;
-    }
-    
-   /* 
-   O método substring é utilizado para selecionar caracteres dentro do email.
-   O método indexOf() é utilizado para recuperar a posição do símbolo @ dentro do email.
+    /* 
+    O método substring é utilizado para selecionar caracteres dentro do email.
+    O método indexOf() é utilizado para recuperar a posição do símbolo @ dentro do email.
    */
 
     var usuario = cliente.email.substring (0, cliente.email.indexOf("@") );
     var dominio = cliente.email.substring (cliente.email.indexOf("@") + 1, cliente.email.length );
-        
+    
     /*
     Ratificando aquelas validações supracitadas, temos a seguinte lógica:
     */
   
     if ( 
         // usuário >= 1 caracter.
-        (usuario.length >= 1) &&
-        // usuário não pode conter @. 
-        (usuario.search("@") == -1) &&
+        (usuario.length < 1) ||
         // usuário não pode conter “ ” ou espaço.
-        (usuario.search(" ") == -1) &&
+        (usuario.search(" ") != -1) ||
         // domínio >= 3 caracteres.
-        (dominio.length >= 3) &&
+        (dominio.length < 3) ||
         // domínio não pode conter o @.
-        (dominio.search("@") == -1) &&
+        (dominio.search("@") != -1) ||
+        (dominio.search("/") != -1) ||
         // domínio não pode conter o “ ” espaço em branco.
-        (dominio.search(" ") == -1) && 
+        (dominio.search(" ") != -1) || 
         // domínio tem que possuir “.” ponto.
-        (dominio.search(".") != -1) &&
+        (dominio.search(".") == -1) ||
         // primeiro ponto >= 1, já que a posição 0 deve possuir algum caracter logo após o símbolo @.
-        (dominio.indexOf(".") >= 1) &&
+        (dominio.indexOf(".") < 1) ||
+        dominio[dominio.indexOf(".") +1] == "." ||
         // posição do ultimo ponto < ultimo caracter, que deve conter um caracter no final.
-        (dominio.lastIndexOf(".") < dominio.length - 1) ) 
+        (dominio.lastIndexOf(".") == dominio.length -1)
+        ) 
         { 
-            return false;
+            return true;
         }   
     else {
-            return true;
+            return false;
         }
 }

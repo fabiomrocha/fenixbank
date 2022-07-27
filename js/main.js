@@ -29,7 +29,7 @@ function carregaObjetosDaTela(){
     cliente.telefone = document.getElementById("telefone").value;
     cliente.email = document.getElementById("email").value;
     
-    console.log(cliente.nome);
+    // console.log(cliente.nome);
     // console.log(cliente.dtNascimento);
     // console.log(cliente.cpf);
     // console.log(cliente.nomeMae);
@@ -63,7 +63,7 @@ function validarCampos(cliente){
         addMessage("dtNascimento", validacaoData);
     }
 
-    if( verificaEmailInvalido(cliente) ){
+    if( verificaSeEmailInvalido(cliente) ){
         addMessage("email", "Email inválido!");
     }
     
