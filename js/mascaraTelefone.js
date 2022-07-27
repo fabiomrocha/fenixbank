@@ -5,14 +5,13 @@
  */
 
 function mascaraFone(event) {
-
     
     var valor = document.getElementById("telefone").value;
     // Verifica caracteres não numéricos e substitui por ""
     var retorno = valor.replace(/\D/g, "");
     // Verifica 0 a esquerda e subititui por ""
     retorno = retorno.replace(/^0/, "");
-    if (retorno.length < 10){
+    if (retorno.length > 0 && retorno.length < 10){
         document.getElementById("telefoneError").innerHTML = "<font color='gray'>Telefone incompleto </font>";
     } else{
         limpaCampo("telefone");
@@ -36,7 +35,7 @@ function mascaraFone(event) {
         else if (retorno.length != 0) {
                 // Coloca a máscara do DDD "("
                 retorno = retorno.replace(/^(\d*)/, "($1");
-            }
+        }
     document.getElementById("telefone").value = retorno;
 }
     
