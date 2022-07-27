@@ -62,6 +62,10 @@ function validarCampos(cliente){
     if(validacaoData !== "Ok"){
         addMessage("dtNascimento", validacaoData);
     }
+
+    if( verificaEmailInvalido(cliente) ){
+        addMessage("email", "Email inválido!");
+    }
     
     if(cliente.cpf == ''){
         addMessage("cpf");

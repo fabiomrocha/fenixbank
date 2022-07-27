@@ -50,8 +50,9 @@
                                 <input type="text" class="input_text" id="nomeMae" placeholder="Digite o nome da sua mãe"/>
                             </label>
                             <label>
-                                <span>E-mail</span>
-                                <input type="email" class="input_text" id="email" placeholder="Digite seu e-mail"/>
+                                <span>E-mail<div id="emailError"></div></span>
+                                <input type="email" class="input_text" id="email" placeholder="Digite seu e-mail" 
+                                onfocus="limpaCampo('email')"/>
                             </label>
                             <label>
                                 <span>Telefone<div id="telefoneError"></div></span>
@@ -93,6 +94,7 @@
 		</footer>
         <script src="js/mascaraTelefone.js"></script>
         <script src="js/validacaoData.js"></script>
+        <script src="js/validacaoEmail.js"></script>
 		<script src="js/validacao.js"></script>	
 		<script src="js/main.js"></script>	
 	</body>
