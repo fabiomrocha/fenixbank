@@ -56,10 +56,11 @@ function validarCampos(cliente){
     
     // Validação Data de Nascimento US02
     // Recebe retorno com mensagem de validação da Data
-    let validacaoData = verificaSeDataNascimentoInvalida(cliente)
+    const validacaoData = verificaSeDataNascimentoInvalida(cliente)
     
-    // Se a mensagem for diferente de Ok (Data Inválida), então adiciona mensagem em tela
-    if(validacaoData !== "Ok"){
+    // Se a validacao da data tiver alguma mensagem de erro (True) então adiciona a mensagem de erro na tela
+    // Dentro do if as strings com algum conteúdo são avaliadas como true e strings vazias ou nulas como false
+    if(validacaoData){
         addMessage("dtNascimento", validacaoData);
     }
 
