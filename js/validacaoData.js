@@ -44,5 +44,6 @@ function verificaSeDataNascimentoInvalida (cliente){
     if(idade < 18)
         return "Menor de idade!";
     else
-        return "Ok";
+        //Sem mensagem de erro significa é válida
+        return null;
 }

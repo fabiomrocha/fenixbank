@@ -29,7 +29,7 @@ function carregaObjetosDaTela(){
     cliente.telefone = document.getElementById("telefone").value;
     cliente.email = document.getElementById("email").value;
     
-    console.log(cliente.nome);
+    //console.log(cliente.nome);
     // console.log(cliente.dtNascimento);
     // console.log(cliente.cpf);
     // console.log(cliente.nomeMae);
@@ -58,8 +58,9 @@ function validarCampos(cliente){
     // Recebe retorno com mensagem de validação da Data
     const validacaoData = verificaSeDataNascimentoInvalida(cliente)
     
-    // Se a mensagem for diferente de Ok (Data Inválida), então adiciona mensagem em tela
-    if(validacaoData !== "Ok"){
+    // Se a validacao da data tiver alguma mensagem de erro (True) então adiciona a mensagem de erro na tela
+    // Dentro do if as strings com algum conteúdo são avaliadas como true e strings vazias ou nulas como false
+    if(validacaoData){
         addMessage("dtNascimento", validacaoData);
     }
 
