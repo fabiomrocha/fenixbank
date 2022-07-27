@@ -21,6 +21,25 @@ function verificaEmailInvalido(cliente) {
     if (cliente.email == null || cliente.email == '') {
         return true;
     } 
+
+    /*
+    Para resolver problemas de validação complexos utilizamos geralmente expressões regulares, as famosas regex:
+    Um outro ponto importante sobre este tipo de validação é que não devemos criar uma regex tão complexa.
+    Podemos acabar deixando alguns provedores ou e-mails de fora da validação.
+    Então a nossa regex será a seguinte: texto@texto.com
+    */
+
+    const regex1 = /\S+@\S+\.\S+/;
+
+    if (!regex1.test(cliente.email)) {
+        return true;
+    };
+    
+    const regex2 = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (!regex2.test(String(cliente.email).toLowerCase())) {
+        return true;
+    }
     
    /* 
    O método substring é utilizado para selecionar caracteres dentro do email.
