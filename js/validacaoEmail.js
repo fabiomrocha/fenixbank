@@ -43,14 +43,16 @@ function verificaSeEmailInvalido(cliente) {
         (dominio.length < 3) ||
         // domínio não pode conter o @.
         (dominio.search("@") != -1) ||
+        // domínio não pode conter o /.
         (dominio.search("/") != -1) ||
-        // domínio não pode conter o “ ” espaço em branco.
+        // domínio não pode conter o “ ” espaço.
         (dominio.search(" ") != -1) || 
         // domínio tem que possuir “.” ponto.
         (dominio.search(".") == -1) ||
         // primeiro ponto >= 1, já que a posição 0 deve possuir algum caracter logo após o símbolo @.
         (dominio.indexOf(".") < 1) ||
-        dominio[dominio.indexOf(".") +1] == "." ||
+        // domínio não pode conter ponto ponto.
+        (dominio[dominio.indexOf(".") +1] == ".") ||
         // posição do ultimo ponto < ultimo caracter, que deve conter um caracter no final.
         (dominio.lastIndexOf(".") == dominio.length -1)
         ) 
